@@ -1,7 +1,9 @@
-import './App.css';
-import Footer from './components/Footer.js'
+import Footer from './components/layout/Footer.js'
 import ItemListContainer from './components/ItemListContainer';
-import NavBar from './components/NavBar';
+import NavBar from './components/layout/NavBar.js';
+
+
+import './App.css';
 
 
 function App() {

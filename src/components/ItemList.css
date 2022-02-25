@@ -1,0 +1,39 @@
+.cardForm{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 60px auto;
+    align-content: center;
+    gap:20px;
+}
+
+.itemList{
+    
+    width: 320px;
+    height: 500px;
+    border: 4px outset #1C6EA4;
+    border-radius: 19px;
+    bottom: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    
+}
+
+
+.itemListImg{
+    border-bottom: 4px outset #1C6EA4;
+    border-radius: 10px;
+}
+
+.iltemListDetail p{
+    color: transparent;
+    background: #666666;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+    font-weight: 700;
+}
+
+.iltemListDetail h4{
+    font-weight: 700;
+}
