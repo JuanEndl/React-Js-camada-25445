@@ -32,7 +32,7 @@ const NavBar = () => {
 						</div>
             <div className='qty'>0</div>
 						<div className="text-gray-700 px-4 py-2 m-2">
-							<button className="text-color">Mi Usuario</button>
+							<button className="text-color btnUsuario">Mi Usuario</button>
 						</div>
 					</div>
 				</div>

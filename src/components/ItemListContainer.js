@@ -38,7 +38,7 @@ const ItemListContainer = () => {
             )
           })
         )
-        :<p>cargando</p>
+        :<h3 className='loader'></h3>
       }
     </section>
   )
