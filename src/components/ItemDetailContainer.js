@@ -10,8 +10,9 @@ const ItemDetailContainer = () => {
 
 	const {id} = useParams()
 
-	const {products: product} = useFethc('https://run.mocky.io/v3/8c59c4c5-9e0c-431b-a776-5926a58c7add', {mode : 'cors'} + id )
-	console.log(product)
+	const {products: product} = useFethc('https://run.mocky.io/v3/8c59c4c5-9e0c-431b-a776-5926a58c7add' + id )
+
+	
 	
 	return (
     <>
@@ -19,9 +20,9 @@ const ItemDetailContainer = () => {
 			<div className="container px-5 py-24 mx-auto">
 				<div className="lg:w-4/5 mx-auto flex flex-wrap">
 					<div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
-						<h2 className="text-sm title-font text-gray-500 tracking-widest">BRAND NAME</h2>
+						<h2 className="text-sm title-font text-gray-500 tracking-widest">{id}</h2>
 						<h1 className="text-gray-900 text-3xl title-font font-medium mb-4">
-						{`${product.name}`}
+						{product.name}
 						</h1>
 						<div className="flex mb-4">
 							<a className="flex-grow text-indigo-500 border-b-2 border-indigo-500 py-2 text-lg px-1">
@@ -42,11 +43,7 @@ const ItemDetailContainer = () => {
 							</button>
 						</div>
 					</div>
-					<img
-						alt="ecommerce"
-						className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-						src="https://dummyimage.com/400x400"
-					/>
+					<img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x400" />
 				</div>
 			</div>
 		</section>

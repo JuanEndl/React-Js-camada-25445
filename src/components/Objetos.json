@@ -1,0 +1,52 @@
+{
+    "products": [
+    {
+        "id": 1,
+        "title": "Motherboard Asus Tuf B450m Plus Ii Am4 Ddr4 B450 Mexx 1",
+        "category": "Mother",
+        "img":"https://fv2-5.failiem.lv/thumb_show.php?i=k4gkmgy64&view",
+        "price": 15249,
+        "stock":7
+    },
+    {
+        "id": 2,
+        "title": "Fuente AZZA 650W ARGB 80 Plus Bronze",
+        "category": "Fuente",
+        "img":"https://fv2-1.failiem.lv/thumb_show.php?i=q3knspp9w&view",
+        "price": 6499,
+        "stock":7
+    },
+    {
+        "id": 3,
+        "title": "Memoria Adata DDR4 (2x8GB) 16GB 4800MHz XPG Spectrix D50 Xtreme RGB CL19",
+        "category": "Memoria",
+        "img":"https://fv2-5.failiem.lv/thumb_show.php?i=uaz7ab86u&view",
+        "price": 78000,
+        "stock":3
+    },
+    {
+        "id": 4,
+        "title": "Procesador AMD Ryzen 9 5900X 4.8GHz Turbo AM4 - No incluye Cooler",
+        "category": "Procesador",
+        "img":"https://fv2-5.failiem.lv/thumb_show.php?i=y6wydep2p&view",
+        "price": 73500,
+        "stock":5
+    },
+    {
+        "id": 5,
+        "title": "Placa de Video MSI GeForce RTX 3060 Ti 8GB GDDR6 VENTUS 2X OCV1 LHR ",
+        "category": "Placa de Video",
+        "img":"https://fv2-4.failiem.lv/thumb_show.php?i=2u9wfbn5k&view",
+        "price": 200000,
+        "stock":9
+    },
+    {
+        "id": 6,
+        "title": "Fuente De Poder Gigabyte 850w 80 Plus Gold Modular",
+        "category": "Fuente",
+        "img":"https://fv2-3.failiem.lv/thumb_show.php?i=kuzx8fgvg&view",
+        "price": 22870,
+        "stock":8
+    }
+    ]
+}
