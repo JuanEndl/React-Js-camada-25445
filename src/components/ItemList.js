@@ -15,7 +15,7 @@ const ItemList = ({ product }) => {
 							<p>{product.category}</p>
 						</div>
 						<div>
-							<h4>{product.name}</h4>
+							<h4>{product.title}</h4>
 						</div>
 						<div>
 							<h2>${product.price}</h2>

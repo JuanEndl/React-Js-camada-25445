@@ -1,51 +1,57 @@
 {
-    "products": [
+    "productos": [
     {
-        "id": 1,
+        "id": "1",
         "title": "Motherboard Asus Tuf B450m Plus Ii Am4 Ddr4 B450 Mexx 1",
         "category": "Mother",
+        "description":"Placa base para juegos AMD B450 (AM4) micro ATX con soporte M.2",
         "img":"https://fv2-5.failiem.lv/thumb_show.php?i=k4gkmgy64&view",
-        "price": 15249,
+        "price": 15.249,
         "stock":7
     },
     {
-        "id": 2,
+        "id": "2",
         "title": "Fuente AZZA 650W ARGB 80 Plus Bronze",
         "category": "Fuente",
+        "description":"Certificación 80 Plus Bronze, Ventilador Silencioso de 120mm, Proporciona hasta 48A / 576W en la línea de 12V",
         "img":"https://fv2-1.failiem.lv/thumb_show.php?i=q3knspp9w&view",
-        "price": 6499,
+        "price": 6.499,
         "stock":7
     },
     {
-        "id": 3,
+        "id": "3",
         "title": "Memoria Adata DDR4 (2x8GB) 16GB 4800MHz XPG Spectrix D50 Xtreme RGB CL19",
         "category": "Memoria",
+        "description":"Su capacidad de 16 GB distribuída en módulos de 2 x 8 GB,",
         "img":"https://fv2-5.failiem.lv/thumb_show.php?i=uaz7ab86u&view",
-        "price": 78000,
+        "price": 78.000,
         "stock":3
     },
     {
-        "id": 4,
+        "id": "4",
         "title": "Procesador AMD Ryzen 9 5900X 4.8GHz Turbo AM4 - No incluye Cooler",
         "category": "Procesador",
+        "description":"El procesador que ofrece la mejor experiencia de juego del mundo 12 núcleos para potenciar la experiencia de juego, la transmisión en vivo y mucho más.",
         "img":"https://fv2-5.failiem.lv/thumb_show.php?i=y6wydep2p&view",
-        "price": 73500,
+        "price": 73.500,
         "stock":5
     },
     {
-        "id": 5,
+        "id": "5",
         "title": "Placa de Video MSI GeForce RTX 3060 Ti 8GB GDDR6 VENTUS 2X OCV1 LHR ",
         "category": "Placa de Video",
+        "description":"Cuenta con 4864 núcleos, por lo que la interfaz de la placa será algo sorprendente.",
         "img":"https://fv2-4.failiem.lv/thumb_show.php?i=2u9wfbn5k&view",
-        "price": 200000,
-        "stock":9
+        "price": 200.000,
+        "stock":"9"
     },
     {
-        "id": 6,
+        "id": "6",
         "title": "Fuente De Poder Gigabyte 850w 80 Plus Gold Modular",
         "category": "Fuente",
+        "description":"La certificación 80 Plus Gold garantiza una eficiencia del 90% al 50% de carga.",
         "img":"https://fv2-3.failiem.lv/thumb_show.php?i=kuzx8fgvg&view",
-        "price": 22870,
+        "price": 22.870,
         "stock":8
     }
     ]

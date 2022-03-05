@@ -1,17 +1,25 @@
 import { useEffect, useState } from "react";
 
-const useFethc = (url) => {
+const useFethc = (url, category) => {
 
-    const urls = 'https://run.mocky.io/v3/8c59c4c5-9e0c-431b-a776-5926a58c7add'
+    const urls = 'https://6221a7deafd560ea69b604a9.mockapi.io/objetos'
 
     const [products, setProducts] = useState([]);
 
 
-    useEffect(() => {
     
+    
+    useEffect(() => {
+        
     fetch(url)
         .then(resp => resp.json())
-        .then(data => setProducts(data))
+        .then(data => {
+            if (category) {
+                setProducts( data.filter (products => products.category == category))
+            } else {
+                setProducts(data)
+            }
+        })
         .catch(err => console.log(err));
     
     
