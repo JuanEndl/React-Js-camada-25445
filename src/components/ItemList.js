@@ -1,3 +1,6 @@
+
+//Item list card con toda la info
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 

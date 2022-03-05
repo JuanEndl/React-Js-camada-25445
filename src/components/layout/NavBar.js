@@ -7,6 +7,9 @@ import { Link } from 'react-router-dom';
 
 import './Navbar.css';
 
+
+//navbar futuro search filter
+
 const NavBar = () => {
 	return (
 		<section className="navBAr">
@@ -16,7 +19,7 @@ const NavBar = () => {
 						<Link to="/">
 							<img className="logoApp" src={logo} alt="logo" />
 						</Link>
-					</div>
+					</div>  	
 					<div className="w-screen md:w-1/2 h-10  cursor-pointer border border-gray-300 text-sm rounded-full flex">
 						<input type="search" name="serch" placeholder="Search" className="flex-grow px-4 rounded-l-full rounded-r-full text-sm focus:outline-none"/>
 						<i className="fas fa-search m-3 mr-5 text-lg   w-4 h-4">

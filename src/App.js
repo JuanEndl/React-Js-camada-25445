@@ -18,7 +18,9 @@ function App() {
       <NavBar></NavBar>
       <Routes>
         <Route index element={<ItemListContainer/>}></Route>
-        <Route path='categoria/:category' element={<ItemListContainer/>}></Route>
+        <Route path='categoria'>
+          <Route path=':category' element={<ItemListContainer/>}></Route>
+        </Route>
         <Route path='/detail/:id' element={<ItemDetailContainer/>}></Route>
       </Routes>
       <Footer></Footer>

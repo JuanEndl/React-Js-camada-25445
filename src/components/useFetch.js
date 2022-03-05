@@ -1,3 +1,8 @@
+
+
+//custom hook
+
+
 import { useEffect, useState } from "react";
 
 const useFethc = (url) => {

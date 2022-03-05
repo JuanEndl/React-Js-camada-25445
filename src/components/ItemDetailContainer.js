@@ -1,3 +1,6 @@
+
+//Item detail conteiner 
+
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import useFethc from './useFetch';
@@ -9,6 +12,8 @@ import useFethc from './useFetch';
 const ItemDetailContainer = () => {
 
 	const {id} = useParams()
+
+	//use fetch reutilizable
 
 	const {products: product} = useFethc(`https://6221a7deafd560ea69b604a9.mockapi.io/objetos/${id}`)
 
