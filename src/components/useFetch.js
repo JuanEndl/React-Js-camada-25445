@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useFethc = (url, category) => {
+const useFethc = (url) => {
 
     const urls = 'https://6221a7deafd560ea69b604a9.mockapi.io/objetos'
 
@@ -13,13 +13,7 @@ const useFethc = (url, category) => {
         
     fetch(url)
         .then(resp => resp.json())
-        .then(data => {
-            if (category) {
-                setProducts( data.filter (products => products.category == category))
-            } else {
-                setProducts(data)
-            }
-        })
+        .then(data => setProducts( data))
         .catch(err => console.log(err));
     
     

@@ -8,13 +8,14 @@ const ItemListContainer = () => {
     const {category} = useParams ()
     console.log(category)
 
-
-
+    
 	const { products } = useFethc('https://6221a7deafd560ea69b604a9.mockapi.io/objetos');
 	
-    
+    const filterCategory = products.filter(products => products.category === category) 
 
-    /*console.log(filterCategory)*/
+    console.log(filterCategory)
+
+    
 
 
 	return (
@@ -59,7 +60,7 @@ const ItemListContainer = () => {
 				products.map((product) => {
 					return (
 						<div key={product.id}>
-							<ItemList product={product} category={category}/>
+							<ItemList product={product}/>
 						</div>
 					);
 				})

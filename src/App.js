@@ -4,7 +4,6 @@ import Footer from './components/layout/Footer.js'
 import ItemListContainer from './components/ItemListContainer';
 import NavBar from './components/layout/NavBar.js';
 import ItemDetailContainer from './components/ItemDetailContainer.js';
-/*import Filter from './components/Filter.js';*/
 
 
 import './App.css';
@@ -19,9 +18,7 @@ function App() {
       <NavBar></NavBar>
       <Routes>
         <Route index element={<ItemListContainer/>}></Route>
-        <Route path='categoria' element={<ItemListContainer/>}>
-          <Route path=':category' element={<ItemListContainer/>}></Route>
-        </Route>
+        <Route path='categoria/:category' element={<ItemListContainer/>}></Route>
         <Route path='/detail/:id' element={<ItemDetailContainer/>}></Route>
       </Routes>
       <Footer></Footer>
