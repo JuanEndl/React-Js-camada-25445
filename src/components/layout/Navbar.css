@@ -39,3 +39,29 @@ button:hover{
     color: white
 }
 
+/*****/
+
+.containerButtonNavBar{
+    height: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    background: #e3f6f5
+}
+
+.buttonNavBar{
+    box-shadow: #212042;
+    transition: all .3s;
+    
+}
+
+.buttonNavBar:active{
+    position:relative;
+	top:1px;
+    
+}
+
+.buttonNavBar:hover{
+    opacity: 0.70;
+}

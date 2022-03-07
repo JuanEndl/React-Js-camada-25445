@@ -12,6 +12,7 @@ import './Navbar.css';
 
 const NavBar = () => {
 	return (
+	<>
 		<section className="navBAr">
 			<div className="header">
 				<div className="w-screen flex flex-row items-center p-1 justify-between  shadow-xs">
@@ -43,6 +44,40 @@ const NavBar = () => {
 				</div>
 			</div>
 		</section>
+				
+		<section className='containerButtonNavBar'>
+			<div className='buttonNavBar'>
+				<Link to="/">
+					<h2 class="title-font font-medium text-gray-900 tracking-widest text-sm">Todos</h2>
+				</Link>
+			</div>
+			<div className='buttonNavBar'>
+				<Link to={`/categoria/fuente`}>
+					<h2 class="title-font font-medium text-gray-900 tracking-widest text-sm">Fuentes</h2>
+				</Link>
+			</div>
+			<div className='buttonNavBar'>
+				<Link to={`/categoria/placavideo`}>
+					<h2 class="title-font font-medium text-gray-900 tracking-widest text-sm">Placa de video</h2>
+				</Link>
+			</div>
+			<div className='buttonNavBar'>
+				<Link to={`/categoria/memoria`}>
+					<h2 class="title-font font-medium text-gray-900 tracking-widest text-sm">Memoria Ram</h2>
+				</Link>
+			</div>
+			<div className='buttonNavBar'>
+				<Link to={`/categoria/mother`}>
+					<h2 class="title-font font-medium text-gray-900 tracking-widest text-sm">Motherboard</h2>
+				</Link>
+			</div>
+			<div className='buttonNavBar'>
+				<Link to={`/categoria/procesador`}>
+					<h2 class="title-font font-medium text-gray-900 tracking-widest text-sm">Procesador</h2>
+				</Link>
+			</div>
+		</section>
+	</>
 	);
 };
 

@@ -17,8 +17,6 @@ const ItemDetailContainer = () => {
 
 	const {products: product} = useFethc(`https://6221a7deafd560ea69b604a9.mockapi.io/objetos/${id}`)
 
-	
-	
 	return (
     <>
 		<section className="text-gray-600 body-font overflow-hidden">
