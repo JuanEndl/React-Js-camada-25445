@@ -5,7 +5,7 @@
 
 import { useEffect, useState } from "react";
 
-const useFethc = (url) => {
+const useFetch = (url) => {
 
     const urls = 'https://6221a7deafd560ea69b604a9.mockapi.io/objetos'
 
@@ -27,4 +27,4 @@ const useFethc = (url) => {
 return{products}
 }
 
-export default useFethc
+export default useFetch

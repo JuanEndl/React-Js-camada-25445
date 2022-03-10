@@ -149,6 +149,14 @@
     opacity: 0;
 }
 
+.buttomPlusRest{
+    background-color: #ccc;
+    width: 30px;
+    height: 30px;
+    border: solid 1px;
+}
+
+
 
 
 /*********************************************/

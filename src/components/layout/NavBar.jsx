@@ -38,7 +38,7 @@ const NavBar = () => {
 						</div>
 						<div className="qty">0</div>
 						<div className="text-gray-700 px-4 py-2 m-2">
-							<button className="text-color btnUsuario">Mi Usuario</button>
+							<button className="text-color btnUsuario buttonUsuario">Mi Usuario</button>
 						</div>
 					</div>
 				</div>
@@ -48,32 +48,32 @@ const NavBar = () => {
 		<section className='containerButtonNavBar'>
 			<div className='buttonNavBar'>
 				<Link to="/">
-					<h2 class="title-font font-medium text-gray-900 tracking-widest text-sm">Todos</h2>
+					<h2 className="title-font font-medium text-gray-900 tracking-widest text-sm">Todos</h2>
 				</Link>
 			</div>
 			<div className='buttonNavBar'>
 				<Link to={`/categoria/fuente`}>
-					<h2 class="title-font font-medium text-gray-900 tracking-widest text-sm">Fuentes</h2>
+					<h2 className="title-font font-medium text-gray-900 tracking-widest text-sm">Fuentes</h2>
 				</Link>
 			</div>
 			<div className='buttonNavBar'>
 				<Link to={`/categoria/placavideo`}>
-					<h2 class="title-font font-medium text-gray-900 tracking-widest text-sm">Placa de video</h2>
+					<h2 className="title-font font-medium text-gray-900 tracking-widest text-sm">Placa de video</h2>
 				</Link>
 			</div>
 			<div className='buttonNavBar'>
 				<Link to={`/categoria/memoria`}>
-					<h2 class="title-font font-medium text-gray-900 tracking-widest text-sm">Memoria Ram</h2>
+					<h2 className="title-font font-medium text-gray-900 tracking-widest text-sm">Memoria Ram</h2>
 				</Link>
 			</div>
 			<div className='buttonNavBar'>
 				<Link to={`/categoria/mother`}>
-					<h2 class="title-font font-medium text-gray-900 tracking-widest text-sm">Motherboard</h2>
+					<h2 className="title-font font-medium text-gray-900 tracking-widest text-sm">Motherboard</h2>
 				</Link>
 			</div>
 			<div className='buttonNavBar'>
 				<Link to={`/categoria/procesador`}>
-					<h2 class="title-font font-medium text-gray-900 tracking-widest text-sm">Procesador</h2>
+					<h2 className="title-font font-medium text-gray-900 tracking-widest text-sm">Procesador</h2>
 				</Link>
 			</div>
 		</section>
