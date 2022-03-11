@@ -15,7 +15,7 @@ const ItemDetailContainer = () => {
 
 	const {id} = useParams()
 
-	//use fetch reutilizable
+	//useFetch reutilizable
 
 	const {products: product} = useFetch(`https://6221a7deafd560ea69b604a9.mockapi.io/objetos/${id}`)
 
@@ -31,7 +31,7 @@ const ItemDetailContainer = () => {
 
 	return (
     <>
-		<section className="text-gray-600 body-font overflow-hidden">
+		<section className="itemListDetail">
 			<div className="container px-5 py-24 mx-auto">
 				<div className="lg:w-4/5 mx-auto flex flex-wrap">
 					<div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
@@ -40,7 +40,7 @@ const ItemDetailContainer = () => {
 						{product.title}
 						</h1>
 						<div className="flex mb-4">
-							<a className="flex-grow text-indigo-500 border-b-2 border-indigo-500 py-2 text-lg px-1">
+							<a className="flex-grow text-indigo-500 border-indigo-500 py-2 text-lg px-1 borderDescription">
 								Description
 							</a>
 						</div>
@@ -54,19 +54,19 @@ const ItemDetailContainer = () => {
 						<div>
 						{ inCard ?
 							<Link to="/">
-								<button className="mr-20 text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded"> Ir al menu </button>
+								<button className="mr-20  buttonBuy"> Ir al menu </button>
 							</Link>
 						: <></>
 						}
 						{ inCard ? 
 						<Link to='/cart'>
-							<button className=" ml-20 text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded"> Terminar Compra </button>
+							<button className=" ml-20  buttonBuy"> Terminar Compra </button>
 						</Link>	
 						: <ItemCount addCart={addCart} stock={product.stock}/>
 						}
 						</div>
 					</div>
-					<img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src={product.img} />
+					<img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded imgBorder" src={product.img} />
 				</div>
 			</div>
 		</section>

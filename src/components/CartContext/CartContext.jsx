@@ -10,20 +10,19 @@ export function CartContextProvider({ children }) {
 
 
     function addItem (product, qty) {
-       if (insideShopCart(product.id)) {
+    if (insideShopCart(product.id)) {
         let index = producCart.findIndex(i => i.id === product.id)
         let productCopy = [...producCart]
         productCopy[index].qty += qty;
         setItemcard(productCopy)
     }
     else {
-        const addproduct = {...product, qty} // junta el producto entero con el q   qty
+        const addproduct = {...product, qty} // junta el producto entero con el qty
         setItemcard( [...producCart, addproduct] );  /// buscar lo que quiero del array de los productos
     }
 
-       
 
-    }
+}
 
     function insideShopCart(id){
 

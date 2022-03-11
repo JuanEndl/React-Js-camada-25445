@@ -161,3 +161,38 @@
 
 /*********************************************/
 
+/*Item*/
+
+.itemListDetail{
+    border: 5px outset #2c698d;
+    border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    margin: 20px;
+    max-width: 70%;
+    max-height: 70%;
+    margin-left: 275px;
+    
+}
+
+.imgBorder{
+    border-left: 6px outset #2c698d;
+}
+
+.borderDescription{
+    border-bottom: 6px dashed #2c698d;
+}
+
+
+.buttonBuy{
+    background:    #bae8e8;
+    background:    linear-gradient(#bae8e8, #2c698d);
+    border:        0px solid #556699;
+    border-radius: 5px;
+    box-shadow:    0 0px #444444;
+    padding:       15px 15px;
+    color:         #ffffff;
+    display:       inline-block;
+    font:          normal bold 17px/1 "Open Sans", sans-serif;
+    text-align:    center;
+}
+
