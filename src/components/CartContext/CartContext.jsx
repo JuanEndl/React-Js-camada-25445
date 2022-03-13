@@ -31,10 +31,18 @@ export function CartContextProvider({ children }) {
         })
     }
 
+    ////////////////////////////////////////////// limpiar carrito entero
+
+
+    function clearAll () {
+        setItemcard([])
+    }
+
+    /////////////////////////////////////////////
 
     return(
 
-        <CartContext.Provider value={ { addItem, producCart} }>
+        <CartContext.Provider value={ { addItem, producCart, clearAll} }>
         
             {children}
 
