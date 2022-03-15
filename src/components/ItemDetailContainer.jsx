@@ -59,7 +59,7 @@ const ItemDetailContainer = () => {
 						: <></>
 						}
 						{ inCard ? 
-						<Link to='/cart'>
+						<Link to={`/cart/${product.id}`}>
 							<button className=" ml-20  buttonBuy"> Terminar Compra </button>
 						</Link>	
 						: <ItemCount addCart={addCart} stock={product.stock}/>

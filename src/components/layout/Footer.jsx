@@ -1,15 +1,13 @@
 //todavia a preparar
 
-import React from 'react'
-
-
+import React from 'react';
 
 const Footer = (props) => {
-  return (
-    <>
-    <div>este es mi footer !!!</div>
-    </>
-  )
-}
+	return (
+		<>
+		<div>footer</div>
+		</>
+	);
+};
 
-export default Footer
+export default Footer;
