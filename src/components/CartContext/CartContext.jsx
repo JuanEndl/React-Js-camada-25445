@@ -42,7 +42,7 @@ export function CartContextProvider({ children }) {
 
     return(
 
-        <CartContext.Provider value={ { addItem, producCart, clearAll} }>
+        <CartContext.Provider value={ { addItem, producCart, clearAll  } }>
         
             {children}
 

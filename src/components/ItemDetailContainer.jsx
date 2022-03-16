@@ -11,6 +11,7 @@ import CartContext from './CartContext/CartContext';
 import { Link } from 'react-router-dom';
 
 
+
 const ItemDetailContainer = () => {
 
 	const {id} = useParams()
@@ -59,9 +60,9 @@ const ItemDetailContainer = () => {
 						: <></>
 						}
 						{ inCard ? 
-						<Link to={`/cart/${product.id}`}>
+						<Link to="/cart">
 							<button className=" ml-20  buttonBuy"> Terminar Compra </button>
-						</Link>	
+						</Link>
 						: <ItemCount addCart={addCart} stock={product.stock}/>
 						}
 						</div>
