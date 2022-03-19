@@ -2,7 +2,9 @@
 
 import React,{ useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { useEffect } from 'react';
 import useFetch from './useFetch';
+import { getProductsCategory } from "./firebase/firebaseClient"
 
 
 export default function ItemCount({stock, addCart}) {
@@ -11,6 +13,22 @@ export default function ItemCount({stock, addCart}) {
     // traer el precio al ItemCount
     const {id} = useParams()
     
+
+    useEffect(() => {                                            /////// no anda
+		
+		getProductsCategory('id' , id ).then(data => {
+			setproductos(data[0])
+			
+		}) 
+		
+		
+	}, [])
+	
+	const [productos, setproductos] = useState([])
+
+
+
+
     /*const {products: product} = useFetch(`https://6221a7deafd560ea69b604a9.mockapi.io/objetos/${id}`)*/
     //
     
@@ -37,7 +55,7 @@ export default function ItemCount({stock, addCart}) {
         </div>
         <div>
             <div className="flex mt-2">
-				<span className="title-font font-medium text-2xl text-gray-900" >${product.price}</span>
+				<span className="title-font font-medium text-2xl text-gray-900" >${productos.price}</span>
 				<button onClick={() => addCart(count)} className="flex ml-auto buttonBuy">
 					Agregar al carrito
 				</button>
