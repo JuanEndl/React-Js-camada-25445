@@ -11,7 +11,7 @@ export default function ItemCount({stock, addCart}) {
     // traer el precio al ItemCount
     const {id} = useParams()
     
-    const {products: product} = useFetch(`https://6221a7deafd560ea69b604a9.mockapi.io/objetos/${id}`)
+    /*const {products: product} = useFetch(`https://6221a7deafd560ea69b604a9.mockapi.io/objetos/${id}`)*/
     //
     
 

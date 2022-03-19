@@ -9,6 +9,8 @@ import useFetch from './useFetch';
 import { useContext } from 'react';
 import CartContext from './CartContext/CartContext';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { getProductsCategory } from './firebase/firebaseClient';
 
 
 
@@ -16,8 +18,26 @@ const ItemDetailContainer = () => {
 
 	const {id} = useParams()
 
+
+
+	useEffect(() => {                                            /////// no anda
+	
+	 getProductsCategory('id' , id ).then(data => {
+			console.log(data[0])
+			
+		}) 
+
+
+	}, [])
+	
+
+
+
+
+
+
 	///////useFetch reutilizable
-	const {products: product} = useFetch(`https://6221a7deafd560ea69b604a9.mockapi.io/objetos/${id}`)
+	/*const {products: product} = useFetch(`https://6221a7deafd560ea69b604a9.mockapi.io/objetos/${id}`)*/
 	//////
 
 	const { addItem } = useContext(CartContext)

@@ -47,7 +47,7 @@ const NavBar = () => {
 				
 		<section className='containerButtonNavBar'>
 			<div className='buttonNavBar'>
-				<Link to="/">
+				<Link to="/">    {/* no anda */}
 					<h2 className="title-font font-medium text-gray-900 tracking-widest text-sm">Todos</h2>
 				</Link>
 			</div>

@@ -2,37 +2,57 @@
 
 
 import ItemList from './ItemList';
-import useFethc from './useFetch';
+
+import { getProducts } from "./firebase/firebaseClient"
+/*import useFethc from './useFetch';*/
 import { useParams } from 'react-router-dom';
 
 
 
 import './ItemList.css';
+import { useState, useEffect } from 'react';
 
 
 const ItemListContainer = () => {
 
+	
+    
+
+	const [productos, setproductos] = useState([])
+
+
+	useEffect(() => {
+	
+		getProducts().then(data => {
+			setproductos(data)
+		})
+
+
+		
+
+
+	}, [])
+	
 
     
     
     const {category} = useParams ()
     console.log(category)
     
-    
-	
-	const { products } = useFethc('https://6221a7deafd560ea69b604a9.mockapi.io/objetos');
-	
-    let filterCategory = products.filter(products => products.category === category) 
+
+	/* const { products } = useFethc('https://6221a7deafd560ea69b604a9.mockapi.io/objetos');*/
+
+     let filterCategory = productos.filter(products => products.category === category) 
     console.log(filterCategory)
     
 
     if ( category
     ) {
-            filterCategory = products.filter(products => products.category === category) 
+            filterCategory = productos.filter(products => products.category === category) 
     } else {
-        filterCategory = products 
+        filterCategory = productos 
     }
-
+ 
 
 
 //filtro y .map a itemList

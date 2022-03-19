@@ -3,7 +3,7 @@
 //custom hook
 
 
-import { useEffect, useState } from "react";
+/*import { useEffect, useState } from "react";
 
 const useFetch = (url) => {
 
@@ -27,4 +27,4 @@ const useFetch = (url) => {
 return{products}
 }
 
-export default useFetch
+export default useFetch*/
