@@ -19,6 +19,7 @@ const ItemListContainer = () => {
     console.log(category)
     
     
+	
 	const { products } = useFethc('https://6221a7deafd560ea69b604a9.mockapi.io/objetos');
 	
     let filterCategory = products.filter(products => products.category === category) 
@@ -31,6 +32,7 @@ const ItemListContainer = () => {
     } else {
         filterCategory = products 
     }
+
 
 
 //filtro y .map a itemList

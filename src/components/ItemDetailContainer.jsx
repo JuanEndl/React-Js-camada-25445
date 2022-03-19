@@ -16,9 +16,9 @@ const ItemDetailContainer = () => {
 
 	const {id} = useParams()
 
-	//useFetch reutilizable
-
+	///////useFetch reutilizable
 	const {products: product} = useFetch(`https://6221a7deafd560ea69b604a9.mockapi.io/objetos/${id}`)
+	//////
 
 	const { addItem } = useContext(CartContext)
 
@@ -28,7 +28,6 @@ const ItemDetailContainer = () => {
 		addItem(product, qty)
 		setInCard(true)
 	}
-
 
 	return (
     <>

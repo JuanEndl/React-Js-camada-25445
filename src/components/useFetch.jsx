@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 const useFetch = (url) => {
 
-    const urls = 'https://6221a7deafd560ea69b604a9.mockapi.io/objetos'
+    const urls = 'https://run.mocky.io/v3/d7beef24-e79e-4cd0-be3c-42563c5039fa'
 
     const [products, setProducts] = useState([]);
 
