@@ -4,7 +4,6 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemCount from './ItemCount';
-import useFetch from './useFetch';
 
 import { useContext } from 'react';
 import CartContext from './CartContext/CartContext';
@@ -18,7 +17,7 @@ const ItemDetailContainer = () => {
 
 	const {id} = useParams()
 
-	useEffect(() => {                                            /////// no anda
+	useEffect(() => {                                         
 		
 		getProductsCategory('id' , id ).then(data => {
 			setproductos(data[0])
@@ -30,15 +29,6 @@ const ItemDetailContainer = () => {
 	
 	const [productos, setproductos] = useState([])
 	
-	
-	
-	
-
-
-
-	///////useFetch reutilizable
-	/*const {products: product} = useFetch(`https://6221a7deafd560ea69b604a9.mockapi.io/objetos/${id}`)*/
-	//////
 
 	const { addItem } = useContext(CartContext)
 

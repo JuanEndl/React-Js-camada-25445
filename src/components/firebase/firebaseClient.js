@@ -38,13 +38,19 @@ export const getProducts = async() => {
 
 
 export const getProductsCategory = async(prop, value) => {
-    
-    const q = query(productsCollection, where(prop, "==", value))
+    const q = query(productsCollection, where(prop, "==", value));
     const querySnapshot = await getDocs(q);
     let products = []
     querySnapshot.forEach((doc) => {
-        products.push(doc.data())
+    products.push(doc.data())
     });
-    
+
     return products
+
+    //const querySnapshot = await getDocs(q);
+    //querySnapshot.forEach((doc) => {
+        //console.log(doc.id, "=>,", doc.data());
+    //});
+    
+    
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import carrito from '../assets/iconos/carrito.png';
+import CartWidget from './CartWidget';
 import logo from '../assets/iconos/logo.png';
 import { ImSearch } from 'react-icons/im';
 import { Link } from 'react-router-dom';
@@ -8,9 +8,17 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 
+
+
+
 //navbar futuro search filter
 
 const NavBar = () => {
+
+	
+
+
+
 	return (
 	<>
 		<section className="navBAr">
@@ -31,12 +39,7 @@ const NavBar = () => {
 						<i className="fas fa-bars" />
 					</div>
 					<div className="flex flex-row-reverse mr-8 hidden md:flex">
-						<div className="text-gray-700 text-center  px-4 py-2 m-2">
-							<a href="#">
-								<img className="shoppingCart" src={carrito} alt="carrito" />
-							</a>
-						</div>
-						<div className="qty">0</div>
+						<CartWidget/>
 						<div className="text-gray-700 px-4 py-2 m-2">
 							<button className="text-color btnUsuario buttonUsuario">Mi Usuario</button>
 						</div>
@@ -47,7 +50,7 @@ const NavBar = () => {
 				
 		<section className='containerButtonNavBar'>
 			<div className='buttonNavBar'>
-				<Link to="/">    {/* no anda */}
+				<Link to="/">  
 					<h2 className="title-font font-medium text-gray-900 tracking-widest text-sm">Todos</h2>
 				</Link>
 			</div>

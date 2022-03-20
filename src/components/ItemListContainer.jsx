@@ -2,47 +2,41 @@
 
 
 import ItemList from './ItemList';
-
-import { getProducts } from "./firebase/firebaseClient"
-/*import useFethc from './useFetch';*/
+import { getProducts , getProductsCategory } from "./firebase/firebaseClient"
 import { useParams } from 'react-router-dom';
-
-
+import { useState, useEffect } from 'react';
 
 import './ItemList.css';
-import { useState, useEffect } from 'react';
 
 
 const ItemListContainer = () => {
-
 	
-    
-
-	const [productos, setproductos] = useState([])
-
-
+	
 	useEffect(() => {
-	
+		
+		//// traigo todos los productos
 		getProducts().then(data => {
 			setproductos(data)
 		})
-
-
 		
-
-
+		/// traigo el category de firebase
+		getProductsCategory('category' , 'category').then ( data => {
+			console.log(data)
+		})
+		
+		
 	}, [])
 	
+		// guardo los archivos traidos en productos
+		const [productos, setproductos] = useState([]) 
+		console.log(productos)
+		
+		/// uso el parametro category del producto
+		const {category} = useParams ()
+	
 
-    
-    
-    const {category} = useParams ()
-    console.log(category)
-    
-
-	/* const { products } = useFethc('https://6221a7deafd560ea69b604a9.mockapi.io/objetos');*/
-
-     let filterCategory = productos.filter(products => products.category === category) 
+	///////////////////////// filtrado de prodcutos
+    let filterCategory = productos.filter(products => products.category === category) 
     console.log(filterCategory)
     
 
@@ -52,7 +46,7 @@ const ItemListContainer = () => {
     } else {
         filterCategory = productos 
     }
- 
+	//////////////////
 
 
 //filtro y .map a itemList

@@ -6,6 +6,9 @@ const CartContext = createContext();
 export function CartContextProvider({ children }) {
 
 
+
+
+
     const [producCart, setItemcard] = useState([])
     
     //////////// remover producto
@@ -44,7 +47,8 @@ export function CartContextProvider({ children }) {
             setItemcard( [...producCart, addproduct] );  /// buscar lo que quiero del array de los productos
         }
     }
-    ///////
+
+///////
 
     ////// agregar el total
     function addPrice (productCart){
@@ -64,6 +68,9 @@ export function CartContextProvider({ children }) {
 
 
 
+
+
+
     ////////////////////////////////////////////// limpiar carrito entero
     function clearAll () {
         setItemcard([])
@@ -72,7 +79,7 @@ export function CartContextProvider({ children }) {
 
     return(
 
-        <CartContext.Provider value={ { addItem, producCart, clearAll, addPrice, removeItem, removeItemFromArr } }>
+        <CartContext.Provider value={ { addItem, producCart, clearAll, addPrice, removeItem, removeItemFromArr, clearAll} }>
         
             {children}
 

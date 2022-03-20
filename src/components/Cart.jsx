@@ -8,9 +8,9 @@ import CartContext from './CartContext/CartContext';
 
 const Cart = () => {
   
-  const  {producCart, addPrice, removeItem}  = useContext(CartContext)
+  const  {producCart, addPrice, removeItem , clearAll}  = useContext(CartContext)
 
-////////////// crear una variable afuera del carrito para hacer el precio total
+//////// crear una variable afuera del carrito para hacer el precio total
   let cart = {
       totalPrice: addPrice (producCart),
       //discount: this.totalPrice * 0.10,
@@ -34,7 +34,6 @@ const Cart = () => {
             <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Cantidad </th>
             <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Precio</th>
             <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">Precio Total</th>
-            <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">Eliminar</th>
           </tr>
         </thead>
         <tbody>
@@ -43,29 +42,33 @@ const Cart = () => {
 				producCart.map((i) => { 
 					return (
           <>
-          <tr>
-            <img  key={i.id} className='sizeImgTasble' src={i.img} alt='imagen'/>
+          <tr key={i.id}>
+            <img   className='sizeImgTasble' src={i.img} alt='imagen'/>
             <td className="px-4 py-3">{i.title}</td>
             <td className="px-4 py-3">{i.qty}</td>
             <td className="px-4 py-3">${i.price}</td>
             <td className="px-4 py-3">${i.countPrice}</td>
-            <td className="px-4 py-3">${i.countPrice}</td>
             <td className="px-4 py-3">
-              <button onClick={()=>removeItem(i.id)} className=" ml-20  buttonBuy"> Eliminar </button>
+              <button onClick={()=>removeItem(i.id)} className="   buttonBuy"> Eliminar </button>
             </td>  
           </tr>
           </>
 					);
 				})
 			) : (
-				<p className="loader" />
+        <div >
+          <p>carrito vacio !!!</p>
+        </div>
 			)}
-      <th className=" justify-self-end px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">{cart.totalPrice}</th>
-      <th className=" justify-self-end px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">Total carrito</th>
         </tbody>
+        
       </table>
-      
+      <div className='flex justify-end lugar'>
+          <th className=" justify-self-end px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">Total carrito</th>
+          <th className=" justify-self-end px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">${cart.totalPrice}</th>
+        </div>
       <div className='grid justify-items-stretch'>
+      <button onClick={clearAll} className=" buttonBuy justify-self-end px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">vaciar carrito</button>
       </div>
     </div>
     <div className="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
