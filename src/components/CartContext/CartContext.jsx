@@ -1,16 +1,71 @@
 
 import { createContext , useState} from "react"
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { getProductsCategory } from "../firebase/firebaseClient";
+
+
+
+
+
+
+
+
+
+
+
+
 
 const CartContext = createContext();
 
 export function CartContextProvider({ children }) {
+    
+    
+
+    /* const {stock} = useParams()
+
+	useEffect(() => {                                         
+		
+		getProductsCategory('price' , 'price' ).then(data => {
+			console.log(data)
+			
+		}) 
+		
+		
+	}, []) */
+//////////////////////////////// quise traer la info de firebase para usar el stock pero no me funciono 
+
+    
+///////////////////////////////////////////////////
 
 
 
-
+////////////////////////////////////////////////////
 
     const [producCart, setItemcard] = useState([])
+
     
+
+    
+    const [count, setcount] = useState(1)
+    console.log(count)
+    
+    
+    function add() {
+        if (count < stock)  setcount(count + 1) 
+    }
+    
+    function subtract() {
+        if (count > 1)  setcount(count - 1)
+    } 
+    
+    
+
+
+
+
+
+    //////////////////////////////////////////////////////
     //////////// remover producto
     function removeItem(id){
         if(producCart.length != 0){
@@ -47,8 +102,7 @@ export function CartContextProvider({ children }) {
             setItemcard( [...producCart, addproduct] );  /// buscar lo que quiero del array de los productos
         }
     }
-
-///////
+    ///////
 
     ////// agregar el total
     function addPrice (productCart){
@@ -76,10 +130,9 @@ export function CartContextProvider({ children }) {
         setItemcard([])
     }
      /////////////////////////////////////////////
-
     return(
 
-        <CartContext.Provider value={ { addItem, producCart, clearAll, addPrice, removeItem, removeItemFromArr, clearAll} }>
+        <CartContext.Provider value={ { addItem, producCart, clearAll, addPrice, removeItem, removeItemFromArr, clearAll, count, add, subtract } }>
         
             {children}
 

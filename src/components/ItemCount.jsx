@@ -30,7 +30,9 @@ export default function ItemCount({ stock, addCart }) {
 	const [productos, setproductos] = useState([])
     
 
-    const [count, setcount] = useState(1)
+    const  {add, subtract, count}  = useContext(CartContext)
+    
+    /* const [count, setcount] = useState(1)
     console.log(count)
     
     
@@ -40,7 +42,7 @@ export default function ItemCount({ stock, addCart }) {
 
     function subtract() {
         if (count > 1)  setcount(count - 1)
-    } 
+    }  */
 
 
     return(
