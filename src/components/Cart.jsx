@@ -49,7 +49,7 @@ const Cart = () => {
             <td className="px-4 py-3">${i.price}</td>
             <td className="px-4 py-3">${i.countPrice}</td>
             <td className="px-4 py-3">
-              <button onClick={()=>removeItem(i.id)} className="   buttonBuy"> Eliminar </button>
+              <button onClick={()=>removeItem(i)} className="   buttonBuy"> Eliminar </button>
             </td>  
           </tr>
           </>

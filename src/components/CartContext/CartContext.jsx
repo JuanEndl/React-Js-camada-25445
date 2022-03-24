@@ -21,11 +21,17 @@ export function CartContextProvider({ children }) {
     
     
     const [producCart, setItemcard] = useState([])
+    const [carrito, setcarrito] = useState(0)
     const [totalcarrito, settotalcarrito] = useState(0)
     
     console.log(totalcarrito)
 
-    
+    //////
+    const sumar = (valor, multiplicador) => {
+        return valor * multiplicador
+    }
+
+    //////
     ////// agregar producto + la cantidad
     function addItem (product, qty,) {
         
@@ -33,7 +39,7 @@ export function CartContextProvider({ children }) {
             let index = producCart.findIndex(i => i.id === product.id)
             let productCopy = [...producCart]
             productCopy[index].qty += qty;            
-            productCopy[index].countPrice = productCopy[index].price * productCopy[index].qty;
+            setcarrito(carrito + sumar(product.price, qty))
             console.log(productCopy[index].countPrice);
             setItemcard(productCopy)
             settotalcarrito(totalcarrito + qty)
@@ -44,6 +50,7 @@ export function CartContextProvider({ children }) {
             const addproduct = {...product, qty, countPrice} // junta el producto entero con el qty y el countPrice
             setItemcard( [...producCart, addproduct] );  /// buscar lo que quiero del array de los productos
             settotalcarrito(totalcarrito + addproduct.qty)
+            setcarrito(carrito + sumar(addproduct.price, addproduct.prodQty))
         }
     }
     ///////
@@ -63,22 +70,24 @@ export function CartContextProvider({ children }) {
         })
     }
     
+    ////////////////////////////////////////////// limpiar carrito entero
+    function clearAll () {
+        setItemcard([])
+        settotalcarrito(0)
+        setcarrito(0)
+    }
     //////////// remover producto
-    function removeItem(id){
-        if(producCart.length != 0){
-            let index = producCart.findIndex(i => i.id === id)
+    function removeItem(product){
+        if(insideShopCart(product.id)){
+            let index = producCart.findIndex(i => i.id === product.id)
             let productCopy = [...producCart]
-            removeItemFromArr(productCopy,productCopy[index])
+            setcarrito(carrito - sumar(product.price, product.qty))
+            settotalcarrito(totalcarrito - product.qty)
+            productCopy.splice(index, 1)
             setItemcard(productCopy)
         }
     }
 
-    function removeItemFromArr ( arr, item ) {
-        var i = arr.indexOf( item );
-        if ( i !== -1 ) {
-            arr.splice( i, 1 );
-        }
-    }
     /////////////
     
     
@@ -86,14 +95,10 @@ export function CartContextProvider({ children }) {
     
     
 
-    ////////////////////////////////////////////// limpiar carrito entero
-    function clearAll () {
-        setItemcard([])
-    }
      /////////////////////////////////////////////
     return(
 
-        <CartContext.Provider value={ { addItem, producCart, clearAll, addPrice, removeItem, removeItemFromArr, clearAll } }>
+        <CartContext.Provider value={ { addItem, producCart, clearAll, addPrice, removeItem, clearAll, totalcarrito } }>
         
             {children}
 
