@@ -11,9 +11,10 @@ import carrito from '../assets/iconos/carrito.png';
 
 const CartWidget = () => {
 
-	const {count, setcount} = useContext(CartContext)
-	console.log(count)
-
+	/*const {count, setcount} = useContext(CartContext)
+	console.log(count)*/
+	const {totalcarrito} = useContext(CartContext)
+	console.log(totalcarrito)
 
 
 	return (
@@ -23,7 +24,7 @@ const CartWidget = () => {
 			<img className="shoppingCart" src={carrito} alt="carrito" />
 		</a>
 	</div>
-	<div className="qty">{!setcount && <p className='cartQuantity'>{count}</p>}</div>
+	<div className="qty">{!totalcarrito && <p className='cartQuantity'>{totalcarrito}</p>}</div>
     </>
 	)
 }
