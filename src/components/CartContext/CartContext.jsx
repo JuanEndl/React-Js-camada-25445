@@ -18,23 +18,20 @@ const CartContext = createContext();
 
 export function CartContextProvider({ children }) {
     
-    
-    
     const [producCart, setItemcard] = useState([])
     const [carrito, setcarrito] = useState(0)
-    const [totalcarrito, settotalcarrito] = useState(0)
+    const [itemTotalCarrito, setitemTotalCarrito] = useState(0)
     
-    console.log(totalcarrito)
+    console.log(itemTotalCarrito)
 
-    //////
+    ////// 
     const sumar = (valor, multiplicador) => {
         return valor * multiplicador
     }
-
     //////
+
     ////// agregar producto + la cantidad
     function addItem (product, qty,) {
-        
         if (insideShopCart(product.id)) {
             let index = producCart.findIndex(i => i.id === product.id)
             let productCopy = [...producCart]
@@ -42,15 +39,15 @@ export function CartContextProvider({ children }) {
             setcarrito(carrito + sumar(product.price, qty))
             console.log(productCopy[index].countPrice);
             setItemcard(productCopy)
-            settotalcarrito(totalcarrito + qty)
+            setitemTotalCarrito(itemTotalCarrito + qty)
         }
         else {
             let countPrice;
             countPrice = product.price * qty;
             const addproduct = {...product, qty, countPrice} // junta el producto entero con el qty y el countPrice
             setItemcard( [...producCart, addproduct] );  /// buscar lo que quiero del array de los productos
-            settotalcarrito(totalcarrito + addproduct.qty)
             setcarrito(carrito + sumar(addproduct.price, addproduct.prodQty))
+            setitemTotalCarrito(itemTotalCarrito + addproduct.qty)
         }
     }
     ///////
@@ -64,7 +61,6 @@ export function CartContextProvider({ children }) {
     /////////
     
     function insideShopCart(id){
-        
         return  producCart.some( function(inside){
             return(inside.id === id)
         })
@@ -73,32 +69,53 @@ export function CartContextProvider({ children }) {
     ////////////////////////////////////////////// limpiar carrito entero
     function clearAll () {
         setItemcard([])
-        settotalcarrito(0)
+        setitemTotalCarrito(0)
         setcarrito(0)
     }
-    //////////// remover producto
+
+    //////////////// agrega 1 
+    function addOne(product)  { 
+        console.log(producCart)
+        setItemcard(producCart.map(e => {
+            return e.id === product ? {...e, qty: e.qty + 1, countPrice: e.countPrice + e.price } : e
+        }))
+        setcarrito(carrito - producCart.countPrice)
+        setitemTotalCarrito(itemTotalCarrito + 1)
+        
+    }
+    ////////////////////////
+
+
+    /////////// se quita 1 
+    function deleteOne(product)  { 
+        producCart.qty === 1 ? removeItem(product) :
+        console.log(producCart)
+        setItemcard(producCart.map(e => {
+            return e.id === product ? {...e, qty: e.qty - 1, countPrice: e.countPrice - e.price } : e
+        }))
+        setcarrito(carrito - producCart.countPrice)
+        setitemTotalCarrito(itemTotalCarrito - 1)
+        
+    }
+    /////////////
+
+    ////////// remover producto
     function removeItem(product){
-        if(insideShopCart(product.id)){
-            let index = producCart.findIndex(i => i.id === product.id)
+        if(producCart.length  != 0){
+            let index = producCart.findIndex(i => i.id === product)
             let productCopy = [...producCart]
-            setcarrito(carrito - sumar(product.price, product.qty))
-            settotalcarrito(totalcarrito - product.qty)
+            setitemTotalCarrito(itemTotalCarrito - product.qty)
             productCopy.splice(index, 1)
             setItemcard(productCopy)
         }
     }
-
-    /////////////
-    
-    
-    
+    //////////// 
     
     
 
-     /////////////////////////////////////////////
     return(
 
-        <CartContext.Provider value={ { addItem, producCart, clearAll, addPrice, removeItem, clearAll, totalcarrito } }>
+        <CartContext.Provider value={ { addItem, producCart, clearAll, addPrice, removeItem, clearAll, itemTotalCarrito, deleteOne,  addOne    } }>
         
             {children}
 

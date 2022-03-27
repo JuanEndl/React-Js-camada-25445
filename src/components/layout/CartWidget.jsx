@@ -13,8 +13,8 @@ const CartWidget = () => {
 
 	/*const {count, setcount} = useContext(CartContext)
 	console.log(count)*/
-	const {totalcarrito} = useContext(CartContext);
-	console.log(totalcarrito)
+	const {itemTotalCarrito} = useContext(CartContext);
+	console.log(itemTotalCarrito)
 
 
 	return (
@@ -24,7 +24,7 @@ const CartWidget = () => {
 			<img className="shoppingCart" src={carrito} alt="carrito" />
 		</a>
 	</div>
-	<div className="qty">{totalcarrito && <p className='cartQuantity'>{totalcarrito}</p>}</div>
+	<div className="qty">{itemTotalCarrito && <p className='cartQuantity'>{itemTotalCarrito}</p>}</div>
     </>
 	)
 }

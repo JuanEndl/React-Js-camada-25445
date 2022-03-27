@@ -1,0 +1,81 @@
+
+
+.containeritems{
+    align-items: center;
+    border: 3px outset #2c698d;
+}
+
+.cartUnity{
+    display: flex;
+    align-items: center;
+    border-top: 1px outset #2c698d;
+    justify-content: space-around;
+    
+}
+
+.containerTotal{
+    /*border: 4px solid yellow;*/
+    align-items: center;
+    
+
+}
+
+.buttomPlusAndRest{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+    border: solid 1px;
+    width: 30px;
+    height: 30px;
+}
+
+.totalNumber{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 3px outset #2c698d;
+    height: 170px;
+    width: 600px;
+    margin-left: 80px; /* a ver */
+}
+
+.borderborder{
+    border-bottom: 1px outset #2c698d;
+}
+
+.VscTrash{
+    height: 40px;
+    width: 40px;
+    color: #272643;
+}
+
+.containerButtoms{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 232px;
+    margin-top: 10px;
+}
+
+.buttonEmpy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 100px;
+    background-color: red;
+    border-radius: 10%;
+    margin-right: 40px;
+}
+
+.VscTrashTwo{
+    height: 30px;
+    width: 30px;
+    color: white;
+}
+
+.buttomBuy{
+    height: 40px;
+    width: 100px;
+}
+
