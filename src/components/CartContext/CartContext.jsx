@@ -88,6 +88,7 @@ export function CartContextProvider({ children }) {
 
     /////////// se quita 1 
     function deleteOne(product)  { 
+        producCart.findIndex(i => i.id === product)
         producCart.qty === 1 ? removeItem(product) :
         console.log(producCart)
         setItemcard(producCart.map(e => {
@@ -99,14 +100,20 @@ export function CartContextProvider({ children }) {
     }
     /////////////
 
+    const cartItemIndex = (product) => {
+        return (producCart.findIndex(i => i.id === product))
+    }
+
+
     ////////// remover producto
     function removeItem(product){
-        if(producCart.length  != 0){
+        if(producCart.length  !== 0){
             let index = producCart.findIndex(i => i.id === product)
             let productCopy = [...producCart]
-            setitemTotalCarrito(itemTotalCarrito - product.qty)
             productCopy.splice(index, 1)
             setItemcard(productCopy)
+            setitemTotalCarrito(itemTotalCarrito - producCart[cartItemIndex(product)].qty)
+            
         }
     }
     //////////// 
