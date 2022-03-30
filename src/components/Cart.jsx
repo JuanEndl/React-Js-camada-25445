@@ -6,6 +6,7 @@ import CartContext from './CartContext/CartContext';
 import './cart.css';
 import {VscTrash} from 'react-icons/vsc'
 import trash from './assets/iconos/185-trash-bin-outline.png';
+import { Link } from 'react-router-dom';
 
 
 
@@ -72,7 +73,9 @@ const Cart = () => {
                 </button>
               </div>
               <div>
-                <button className=" text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none  rounded bg-[#2c698d]">Comprar</button>
+                <Link to='/checkout'>
+                  <button className=" text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none  rounded bg-[#2c698d]">Comprar</button>
+                </Link>
               </div>
             </div>
         </div>

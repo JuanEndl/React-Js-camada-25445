@@ -86,7 +86,7 @@ export function CartContextProvider({ children }) {
     ////////////////////////
 
 
-    /////////// se quita 1 
+    /////////// se quita 1 TODO
     function deleteOne(product)  { 
         producCart.findIndex(i => i.id === product)
         producCart.qty === 1 ? removeItem(product) :
@@ -122,7 +122,7 @@ export function CartContextProvider({ children }) {
 
     return(
 
-        <CartContext.Provider value={ { addItem, producCart, clearAll, addPrice, removeItem, clearAll, itemTotalCarrito, deleteOne,  addOne    } }>
+        <CartContext.Provider value={ { addItem, producCart, clearAll, addPrice, removeItem, clearAll, itemTotalCarrito, deleteOne, addOne  } }>
         
             {children}
 
