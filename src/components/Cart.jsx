@@ -42,7 +42,7 @@ const Cart = () => {
                     <div className="px-2 py-3">${i.countPrice}</div>
                     <div className="px-2 py-3">
                       <button onClick={()=>removeItem(i.id)}>
-                        <VscTrash   className="VscTrash"/>
+                        <VscTrash className="VscTrash"/>
                       </button>
                     </div>  
                   </div>
@@ -74,7 +74,7 @@ const Cart = () => {
               </div>
               <div>
                 <Link to='/checkout'>
-                  <button className=" text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none  rounded bg-[#2c698d]">Comprar</button>
+                  <button className=" buttonBuy text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none  rounded bg-[#2c698d]">Comprar</button>
                 </Link>
               </div>
             </div>

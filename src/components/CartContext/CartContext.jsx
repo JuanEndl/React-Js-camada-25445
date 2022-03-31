@@ -24,6 +24,7 @@ export function CartContextProvider({ children }) {
     
     console.log(itemTotalCarrito)
 
+
     ////// 
     const sumar = (valor, multiplicador) => {
         return valor * multiplicador
@@ -51,7 +52,7 @@ export function CartContextProvider({ children }) {
         }
     }
     ///////
-    
+
     ////// agregar el total
     function addPrice (productCart){
         let total = 0;
@@ -122,7 +123,7 @@ export function CartContextProvider({ children }) {
 
     return(
 
-        <CartContext.Provider value={ { addItem, producCart, clearAll, addPrice, removeItem, clearAll, itemTotalCarrito, deleteOne, addOne  } }>
+        <CartContext.Provider value={ { addItem, producCart, clearAll, addPrice, removeItem, clearAll, itemTotalCarrito, deleteOne, addOne } }>
         
             {children}
 

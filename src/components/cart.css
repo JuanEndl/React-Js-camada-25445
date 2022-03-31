@@ -61,8 +61,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 40px;
-    width: 100px;
+    height: 48px;
+    width: 103px;
     background-color: red;
     border-radius: 10%;
     margin-right: 40px;
@@ -79,3 +79,48 @@
     width: 100px;
 }
 
+/*/////////////////////////////*/
+
+.containerAll{
+    min-height: 800px;
+    margin-top: 40px;
+    
+}
+
+.flexContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.borderContainer{
+    border: 4px outset #2c698d;
+    min-width: 1200px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    min-height: 700px;
+}
+
+.containerForm{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 4px outset #2c698d;
+    margin-bottom: 30px;
+}
+
+
+.orderEmitida{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 500px;
+    border: 4px outset #2c698d;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.textOrder{
+    background-color: #2c698d;
+    color: white;
+}
