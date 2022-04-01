@@ -82,9 +82,11 @@
 /*/////////////////////////////*/
 
 .containerAll{
-    min-height: 800px;
+    min-height: 700px;
     margin-top: 40px;
-    
+    display: flex;
+    /* align-content: space-around; */
+    justify-content: center;
 }
 
 .flexContainer{
