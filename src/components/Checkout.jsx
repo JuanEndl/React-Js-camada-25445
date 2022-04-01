@@ -12,7 +12,7 @@ const Checkout = () => {
 
     const [buyerData, setBuyerData] = useState({})
     const [orderId, setOrderId] = useState('');
-    const [ordenProcesada, setOrdenProcesada] = useState(true);
+    const [ordenProcesada, setOrdenProcesada] = useState(false);
 
     //////// crear una variable afuera del carrito para hacer el precio total
     let cart = {
@@ -36,7 +36,7 @@ const Checkout = () => {
     const handlerSubmit = (e) => { 
         e.preventDefault();
 
-        const order = {
+            const order = {
             comprador: {
                 Name: buyerData.buyerName,
                 Email: buyerData.buyerEmail,
@@ -46,7 +46,7 @@ const Checkout = () => {
             totalprice: cart.totalPrice
         };
 
-        addOrder(order).then(data => {setOrderId(data), clearAll(), setOrdenEmitida(true), console.log(data)});
+        addOrder(order).then(data => {setOrderId(data), clearAll(), setOrdenProcesada(true), console.log(data)});
         
         
         console.log(order)
