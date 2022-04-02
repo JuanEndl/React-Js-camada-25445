@@ -3,6 +3,7 @@ import { useContext } from 'react'
 import  { addOrder } from './firebase/firebaseClient'
 import CartContext from './CartContext/CartContext'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 
 const Checkout = () => {
@@ -69,6 +70,9 @@ const Checkout = () => {
                     <div className=''>
                         <p className=' textOrder title uppercase text-3xl font-bold'>N° de orden:{orderId}</p>
                     </div>
+                    <Link to="/">
+                    <button className='buttonBuy'>ir al menu</button>
+                    </Link>
             </div>
         </>
         :

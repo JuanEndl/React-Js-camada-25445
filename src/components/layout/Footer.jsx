@@ -31,33 +31,33 @@ const Footer = () => {
 							<h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">ASUS</h2>
 							<nav className="list-none mb-10">
 							<li>
-								<p class="text-gray-600 hover:text-gray-800">First Link</p>
+								<p class="text-gray-600 hover:text-gray-800">Monitores</p>
 							</li>
 							<li>
-								<p class="text-gray-600 hover:text-gray-800">Second Link</p>
+								<p class="text-gray-600 hover:text-gray-800">Mothers</p>
 							</li>
 							<li>
-								<p class="text-gray-600 hover:text-gray-800">Third Link</p>
+								<p class="text-gray-600 hover:text-gray-800">Mouse</p>
 							</li>
 							<li>
-								<p class="text-gray-600 hover:text-gray-800">Fourth Link</p>
+								<p class="text-gray-600 hover:text-gray-800">Teclados</p>
 							</li>
 							</nav>
 						</div>
 						<div className="lg:w-1/4 md:w-1/2 w-full px-4">
-							<h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">RYZER</h2>
+							<h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">RAZER</h2>
 							<nav className="list-none mb-10">
 							<li>
-								<p class="text-gray-600 hover:text-gray-800">First Link</p>
+								<p class="text-gray-600 hover:text-gray-800">Teclados</p>
 							</li>
 							<li>
-								<p class="text-gray-600 hover:text-gray-800">Second Link</p>
+								<p class="text-gray-600 hover:text-gray-800">Auriculares</p>
 							</li>
 							<li>
-								<p class="text-gray-600 hover:text-gray-800">Third Link</p>
+								<p class="text-gray-600 hover:text-gray-800">Microfonos</p>
 							</li>
 							<li>
-								<p class="text-gray-600 hover:text-gray-800">Fourth Link</p>
+								<p class="text-gray-600 hover:text-gray-800">Notebooks</p>
 							</li>
 							</nav>
 						</div>
@@ -65,33 +65,30 @@ const Footer = () => {
 							<h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">COOLER MASTER</h2>
 							<nav className="list-none mb-10">
 							<li>
-								<p class="text-gray-600 hover:text-gray-800">First Link</p>
+								<p class="text-gray-600 hover:text-gray-800">Disipadores</p>
 							</li>
 							<li>
-								<p class="text-gray-600 hover:text-gray-800">Second Link</p>
+								<p class="text-gray-600 hover:text-gray-800">Mouse</p>
 							</li>
 							<li>
-								<p class="text-gray-600 hover:text-gray-800">Third Link</p>
+								<p class="text-gray-600 hover:text-gray-800">Sillas</p>
 							</li>
 							<li>
-								<p class="text-gray-600 hover:text-gray-800">Fourth Link</p>
+								<p class="text-gray-600 hover:text-gray-800">Fuentes</p>
 							</li>
 							</nav>
 						</div>
 						<div className="lg:w-1/4 md:w-1/2 w-full px-4">
-							<h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">NVIDIA</h2>
+							<h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CONTACTO</h2>
 							<nav className="list-none mb-10">
 							<li>
-								<p class="text-gray-600 hover:text-gray-800">First Link</p>
+								<p class="text-black hover:text-gray-800">E-mail: virtualcomputer@gmail.com</p>
 							</li>
 							<li>
-								<p class="text-gray-600 hover:text-gray-800">Second Link</p>
+								<p class="text-black hover:text-gray-800">Telefono: 45874685</p>
 							</li>
 							<li>
-								<p class="text-gray-600 hover:text-gray-800">Third Link</p>
-							</li>
-							<li>
-								<p class="text-gray-600 hover:text-gray-800">Fourth Link</p>
+								<p class="text-black hover:text-gray-800">Whatsapp: 1564874251</p>
 							</li>
 							</nav>
 						</div>
