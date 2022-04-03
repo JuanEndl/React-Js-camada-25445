@@ -38,9 +38,8 @@ const Cart = () => {
                   <div key={i.id} className='cartUnity'>
                     <img className='sizeImgTasble'  src={i.img} alt='imagen'/>
                     <div className="px-2 py-3 max-w-xs" >{i.title}</div>
-                    <button className="px-2 py-3 buttomPlusAndRest" onClick={()=>deleteOne(i.id)}> - </button>
-                      <span className='px-2 py-3 '>{i.qty}</span>
-                    <button className="px-2 py-3 buttomPlusAndRest" onClick={()=>addOne(i.id)}> + </button>
+                    <div className='px-2 py-3 '>{i.qty}</div>
+                    <div className="px-4 py-3">${i.price}</div>
                     <div className="px-2 py-3">${i.countPrice}</div>
                     <div className="px-2 py-3">
                       <button onClick={()=>removeItem(i.id)}>
