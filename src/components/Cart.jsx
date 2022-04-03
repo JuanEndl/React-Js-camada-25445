@@ -7,6 +7,7 @@ import './cart.css';
 import {VscTrash} from 'react-icons/vsc'
 import trash from './assets/iconos/185-trash-bin-outline.png';
 import { Link } from 'react-router-dom';
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
 
 
@@ -51,8 +52,13 @@ const Cart = () => {
                 );
               })
           ) : (
-            <div >
-              <p>carrito vacio !!!</p>
+            <div className='containercartShopping'>
+              <div>
+                <AiOutlineShoppingCart className='cartShopping'/>
+              </div>
+              <div>
+                <p className="title uppercase text-3xl font-bold mt-6">El carrito se encuentra vacio</p>
+              </div>
             </div>
           )
           }

@@ -128,3 +128,17 @@
     background-color: #2c698d;
     color: white;
 }
+
+
+.containercartShopping{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cartShopping{
+    min-height: 130px;
+    min-width: 130px;
+    margin-top: 20px;
+}
