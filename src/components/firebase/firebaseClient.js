@@ -8,13 +8,15 @@ import {getFirestore, collection, getDocs, query, where, addDoc} from "firebase/
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyAcWt4S-kh6R5w8-n86-1l6N6lgyn5jESY",
-    authDomain: "react-ecommers-25445.firebaseapp.com",
-    projectId: "react-ecommers-25445",
-    storageBucket: "react-ecommers-25445.appspot.com",
-    messagingSenderId: "78380348315",
-    appId: "1:78380348315:web:f8430bc019226fecfde73e"
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+    authDomain: process.env.REACT_APP_FIREBASE_AUTHDOMAIN,
+    projectId: process.env.REACT_APP_FIREBASE_PROJECTID,
+    storageBucket: process.env.REACT_APP_FIREBASE_STORAGEBUCKET,
+    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGINGSENDERID,
+    appId: process.env.REACT_APP_FIREBASE_APPID
 };
+
+console.log('env' , process.env.REACT_APP_FIREBASE_API_KEY)
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
