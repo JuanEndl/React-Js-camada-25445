@@ -74,33 +74,6 @@ export function CartContextProvider({ children }) {
         setcarrito(0)
     }
 
-    //////////////// agrega 1 
-    function addOne(product)  { 
-        console.log(producCart)
-        setItemcard(producCart.map(e => {
-            return e.id === product ? {...e, qty: e.qty + 1, countPrice: e.countPrice + e.price } : e
-        }))
-        setcarrito(carrito - producCart.countPrice)
-        setitemTotalCarrito(itemTotalCarrito + 1)
-        
-    }
-    ////////////////////////
-
-
-    /////////// se quita 1 TODO
-    function deleteOne(product)  { 
-        producCart.findIndex(i => i.id === product)
-        producCart.qty === 1 ? removeItem(product) :
-        console.log(producCart)
-        setItemcard(producCart.map(e => {
-            return e.id === product ? {...e, qty: e.qty - 1, countPrice: e.countPrice - e.price } : e
-        }))
-        setcarrito(carrito - producCart.countPrice)
-        setitemTotalCarrito(itemTotalCarrito - 1)
-        
-    }
-    /////////////
-
     const cartItemIndex = (product) => {
         return (producCart.findIndex(i => i.id === product))
     }
@@ -123,7 +96,7 @@ export function CartContextProvider({ children }) {
 
     return(
 
-        <CartContext.Provider value={ { addItem, producCart, clearAll, addPrice, removeItem, clearAll, itemTotalCarrito, deleteOne, addOne } }>
+        <CartContext.Provider value={ { addItem, producCart, clearAll, addPrice, removeItem, clearAll, itemTotalCarrito } }>
         
             {children}
 

@@ -39,10 +39,14 @@ const Checkout = () => {
 			items: producCart,
 			totalprice: cart.totalPrice
 		};
-
+        
 		addOrder(order).then((data) => {
-			setOrderId(data), clearAll(), setOrdenProcesada(true);
+			setOrderId(data)
 		});
+
+        setOrdenProcesada(true)
+        clearAll()
+		
 
 		console.log(order);
 	};

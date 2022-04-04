@@ -14,7 +14,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 
 const Cart = () => {
   
-  const  {producCart, addPrice, removeItem , clearAll, deleteOne, addOne }  = useContext(CartContext)
+  const  { producCart, addPrice, removeItem , clearAll }  = useContext(CartContext)
 
 //////// crear una variable afuera del carrito para hacer el precio total
   let cart = {
