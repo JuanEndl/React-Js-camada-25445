@@ -61,7 +61,6 @@ const Checkout = () => {
         <div className='text-center flexContainer'>
     {
         ordenProcesada ?
-        <>
             <div className='orderEmitida'>
                 <h2 className='title uppercase text-5xl m-12 font-bold text-center'>Gracias por su compra</h2>
                 <div className=' borderDescription'>
@@ -74,9 +73,7 @@ const Checkout = () => {
                     <button className='buttonBuy'>ir al menu</button>
                     </Link>
             </div>
-        </>
         :
-        <>
         <div className='borderContainer '>
             <h2 className='  title uppercase text-5xl m-12 font-bold text-center'>Finalizar compra</h2>
             <p className='text-xl mb-12'>Para finalizar complete los siguientes campos y se le asignara un codigo de seguimiento del producto.</p>
@@ -98,7 +95,6 @@ const Checkout = () => {
                 </form>
             </div>
         </div>
-        </>
     }
         </div>
     </div>
