@@ -64,7 +64,7 @@ const ItemDetailContainer = () => {
 						<div>
 						{ inCard ?
 							<Link to="/">
-								<button className="mr-20  buttonBuy"> Ir al menu </button>
+								<button className="mr-15  buttonBuy">Seguir comprando</button>
 							</Link>
 						: <></>
 						}

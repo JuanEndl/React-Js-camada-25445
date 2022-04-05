@@ -8,8 +8,6 @@ import './Footer.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { VscGithub } from 'react-icons/vsc';
-
 
 
 const Footer = () => {
@@ -21,8 +19,8 @@ const Footer = () => {
 						<div className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
 							<Link to="/">
 								<img className="logoFotter" src={logofooter} alt="logofooter" />
+								<span className="ml-3 text-xl">Virtual Computer</span>
 							</Link>
-							<span className="ml-3 text-xl">Virtual Computer</span>
 						</div>
 						<p className="mt-2 text-sm text-gray-500 ml-8">Lider en ventas</p>
 					</div>

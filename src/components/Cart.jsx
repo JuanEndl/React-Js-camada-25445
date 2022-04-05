@@ -74,8 +74,8 @@ const Cart = () => {
           </div>
           <div className="containerButtoms">
               <div>
-                <button className="buttonEmpy">
-                  <VscTrash onClick={clearAll} src={trash} className="VscTrashTwo"/>
+                <button onClick={clearAll} className="buttonEmpy">
+                  <VscTrash  src={trash} className="VscTrashTwo"/>
                 </button>
               </div>
               <div>
