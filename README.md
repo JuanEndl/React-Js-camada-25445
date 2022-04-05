@@ -31,3 +31,10 @@ Tiene instalado un npx server para probar un servidor local, tailwind, React ico
 
 ### Faltantes
 Me falto agregarle una busqueda de productos mediante un imput (search) y un login de usuarios, lo tuve que deshacer  por falta de tiempo.
+
+
+
+
+https://user-images.githubusercontent.com/87397662/161778483-449b7e7c-75d8-4903-a191-6ac6fe2f891e.mp4
+
+
