@@ -62,10 +62,5 @@ export default function ItemCount({ stock, addCart }) {
     </>
 
     )           
-
-
-
-
-
 }
 
