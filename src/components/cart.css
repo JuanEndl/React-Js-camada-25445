@@ -1,4 +1,19 @@
 
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+h4, h2, p, label{
+    color: black;
+}
+
+.numberCount{
+    color: black;
+}
+
+.formu{
+    color: black;
+}
 
 .containeritems{
     align-items: center;

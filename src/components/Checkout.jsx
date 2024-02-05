@@ -79,13 +79,13 @@ const Checkout = () => {
 						<div>
 							<form className="containerForm mx-auto w-1/4" onSubmit={handlerSubmit}>
 								<div className="m-10">
-									<label htmlFor="buyerName">Ponga su nombre:</label>
-									<input
+									<label  htmlFor="buyerName">Ponga su nombre:</label>
+									<input 
 										type="text"
 										name="buyerName"
 										autoFocus
 										id="buyerNombre"
-										className="bg-slate-100 mx-4 w-60 px-2 rounded-xl"
+										className="bg-slate-100 mx-4 w-60 px-2 rounded-xl, formu"
 										placeholder="Juan"
 										onChange={handleInput}
 									/>
@@ -96,7 +96,7 @@ const Checkout = () => {
 										type="email"
 										name="buyerEmail"
 										id="buyerEmail"
-										className="bg-slate-100 mx-4 w-60 px-2 rounded-xl"
+										className="bg-slate-100 mx-4 w-60 px-2 rounded-xl, formu"
 										placeholder="Juan@correo.com"
 										onChange={handleInput}
 									/>
@@ -107,7 +107,7 @@ const Checkout = () => {
 										type="text"
 										name="buyerTel"
 										id="buyerTel"
-										className="bg-slate-100 mx-4 w-60 px-2 rounded-xl"
+										className="bg-slate-100 mx-4 w-60 px-2 rounded-xl, formu"
 										placeholder="1569325471"
 										onChange={handleInput}
 									/>

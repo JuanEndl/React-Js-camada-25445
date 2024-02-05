@@ -48,7 +48,7 @@ export default function ItemCount({ stock, addCart }) {
         <div className="flex  border-b border-gray-200 py-2">
             <span className="text-gray-500">Agregar Cantidad</span>
             <button className="ml-auto text-gray-900 buttomPlusRest" onClick={()=>subtract()}> - </button>
-            <span className='my-auto px-5'>{count}</span>
+            <span className='my-auto px-5 numberCount'>{count}</span>
             <button className=" text-gray-900 buttomPlusRest" onClick={()=>add()}> + </button>
         </div>
         <div>
